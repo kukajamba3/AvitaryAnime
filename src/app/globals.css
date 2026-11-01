@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-page: #f3e8ff;
+  --bg-gradient-1: #f8f0fd;
+  --bg-gradient-2: #f7eefc;
+  --bg-gradient-3: #fbe6f1;
+  --accent-text: #4a235a;
+}
+
+body {
+  background-color: var(--bg-page);
+  background-image: radial-gradient(circle at 20% 30%, var(--bg-gradient-1) 0%, transparent 40%),
+                    radial-gradient(circle at 80% 70%, var(--bg-gradient-2) 0%, transparent 40%),
+                    radial-gradient(circle at 50% 10%, var(--bg-gradient-3) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(156, 163, 175, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(244, 114, 182, 0.1), 0 2px 4px -1px rgba(219, 39, 119, 0.06);
+}
+
+.cinema-mode {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.93);
+  z-index: 40;
+}
+
+.cinema-player {
+  z-index: 50;
+}
+
